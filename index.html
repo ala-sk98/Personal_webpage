@@ -5,6 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ala Salehi - Data Analyst</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        body {
+            line-height: 1.6;
+            background-color: #f7f9fc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Header */
+        header {
+            background-color: #0077b6;
+            color: #fff;
+            text-align: center;
+            padding: 2em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+        header nav a {
+            margin: 0 1em;
+            color: #fff;
+            font-weight: bold;
+        }
+        /* Sections */
+        section {
+            padding: 2em 10%;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 2em;
+            color: #0077b6;
+            border-bottom: 2px solid #0077b6;
+            display: inline-block;
+            margin-bottom: 1em;
+        }
+        .job, .education-item, .volunteer-item {
+            margin-bottom: 1.5em;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.4em;
+        }
+        p, li {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1.2em;
+            margin-top: 0.5em;
+        }
+        /* Skills Section */
+        #skills h3 {
+            color: #0077b6;
+            margin-top: 1em;
+        }
+        #skills ul {
+            columns: 2;
+            column-gap: 2em;
+        }
+        /* Contact Section */
+        #contact p {
+            font-size: 1.1em;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #0077b6;
+            color: #fff;
+            font-size: 0.9em;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            section {
+                padding: 2em 5%;
+            }
+            #skills ul {
+                columns: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -16,8 +123,8 @@
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
-            <a href="#projects">Projects & Publications</a>
-            <a href="#volunteer">Volunteer Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#volunteer">Volunteer</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -26,22 +133,22 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Professional Data Analyst with over 6 years of experience in Machine Learning, Deep Learning, and Data Analysis. Proficient in R, Python, and SQL, with a strong background in data preparation.</p>
-        <p><a href="https://www.linkedin.com/in/ala-salehi" target="_blank">LinkedIn</a> | <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=qUntB5sAAAAJ" target="_blank">Google Scholar</a> | <a href="https://github.com/ala-sk98" target="_blank">GitHub</a></p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/ala-salehi" target="_blank">LinkedIn</a>, <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=qUntB5sAAAAJ" target="_blank">Google Scholar</a>, and <a href="https://github.com/ala-sk98" target="_blank">GitHub</a>.</p>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
         <h2>Work Experience</h2>
         <div class="job">
-            <h3>Data Analyst</h3>
-            <p><strong>Greater Fredericton Social Innovation (GFSI) | Full-time</strong> <br> Jan 2024 - Apr 2024</p>
+            <h3>Data Analyst | Greater Fredericton Social Innovation (GFSI)</h3>
+            <p><strong>Fredericton, NB | Full-time</strong> - Jan 2024 - Apr 2024</p>
             <ul>
-                <li>Collaborated with multidisciplinary teams to gather and analyze data for various IT solution projects for non-profit organizations.</li>
+                <li>Collaborated with multidisciplinary teams to gather and analyze data for various IT solution projects.</li>
                 <li>Defined data specifications to optimize solution development for the Meal Planner project.</li>
                 <li>Designed and implemented data models to support IT solution architecture.</li>
             </ul>
         </div>
-        <!-- Repeat similar structure for each job -->
+        <!-- Add additional job entries as needed -->
     </section>
 
     <!-- Skills Section -->
@@ -74,7 +181,6 @@
         <div class="education-item">
             <h3>B.Sc in Electrical and Computer Engineering</h3>
             <p>Iran University of Science and Technology, Sep 2016 - Sep 2020</p>
-            <p>Course Evaluation: Completed through World Education System (WES)</p>
         </div>
     </section>
 
@@ -82,9 +188,8 @@
     <section id="projects">
         <h2>Projects & Publications</h2>
         <ul>
-            <li><strong>Feature Learning Networks for Floor Sensor-based Gait Recognition</strong> - <a href="https://arinex.com.au/EMBC/pdf/full-paper_946.pdf" target="_blank">Paper Link</a> | <a href="https://youtu.be/zYVBMk8RxnE" target="_blank">Presentation</a></li>
+            <li><strong>Feature Learning Networks for Floor Sensor-based Gait Recognition</strong> - <a href="https://arinex.com.au/EMBC/pdf/full-paper_946.pdf" target="_blank">Paper Link</a></li>
             <li><strong>Computational Pathology: A Survey Review and The Way Forward</strong> - <a href="https://arxiv.org/pdf/2304.05482.pdf" target="_blank">Paper Link</a></li>
-            <!-- Add more as needed -->
         </ul>
     </section>
 
@@ -92,17 +197,15 @@
     <section id="volunteer">
         <h2>Volunteer Experience</h2>
         <div class="volunteer-item">
-            <h3>Data Analyst</h3>
-            <p>CivicTech | Oct 2023 - Mar 2024</p>
+            <h3>Data Analyst | CivicTech</h3>
+            <p>Oct 2023 - Mar 2024</p>
             <p>Analyzed data from non-profit organization initiatives to drive insights and improvements.</p>
         </div>
-        <!-- Add more entries as needed -->
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Feel free to reach out to discuss opportunities or collaborations!</p>
         <p>Email: <a href="mailto:ala.salehi@unb.ca">ala.salehi@unb.ca</a></p>
     </section>
 
