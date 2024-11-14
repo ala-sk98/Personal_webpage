@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District Overview</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    /* General Reset and Body Styling */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+    }
+    /* Tab Navigation */
+    .tabs {
+        display: flex;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+    .tab {
+        padding: 10px 20px;
+        flex-grow: 1;
+        text-align: center;
+        border-right: 1px solid #555;
+    }
+    .tab:last-child {
+        border-right: none;
+    }
+    .tab.active {
+        background-color: #4b4b4b;
+    }
+    /* Content Area */
+    .content {
+        padding: 20px;
+    }
+    .dashboard {
+        display: flex;
+        gap: 20px;
+    }
+    /* Sidebar */
+    .sidebar {
+        width: 25%;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .sidebar h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .stat {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .stat i {
+        margin-right: 10px;
+        color: #ccc;
+    }
+    /* Main Info Section */
+    .main-info {
+        width: 75%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .info-box {
+        background-color: #ddd;
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .info-box i {
+        font-size: 24px;
+        margin-right: 10px;
+        color: #555;
+    }
+    .info-box h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    /* Footer Section */
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: #4b4b4b;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .footer div i {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+</style>
+<script>
+    // JavaScript to manage tab switching
+    function openTab(event, tabName) {
+        var i, content, tablinks;
+        content = document.getElementsByClassName("content");
+        for (i = 0; i < content.length; i++) {
+            content[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+</script>
+</head>
+<body>
+
+<!-- Tab Navigation -->
+<div class="tabs">
+    <div class="tab active" onclick="openTab(event, 'Metropolitan')">Metropolitan</div>
+    <div class="tab" onclick="openTab(event, 'Urban')">Urban</div>
+    <div class="tab" onclick="openTab(event, 'Municipal')">Municipal Centers</div>
+    <div class="tab" onclick="openTab(event, 'Civic')">Civic</div>
+    <div class="tab" onclick="openTab(event, 'Residential')">Residential</div>
+    <div class="tab" onclick="openTab(event, 'Rural')">Rural Districts</div>
+</div>
+
+<!-- Content for each tab -->
+<div id="Metropolitan" class="content" style="display: block;">
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Metropolitan</h2>
+            <p>Represents the three largest cities offering a comprehensive range of services, can host large events, and are regional hubs.</p>
+            <div class="stat">
+                <i class="fas fa-users"></i>
+                <div><strong>Population</strong><br>Median Current 2024: 74,173</div>
+            </div>
+            <div class="stat">
+                <i class="fas fa-chart-line"></i>
+                <div><strong>Growth Rate</strong><br>2019-2024: 11.6%<br>2014-2024: 18.7%</div>
+            </div>
+            <div class="stat">
+                <i class="fas fa-dollar-sign"></i>
+                <div><strong>Median Household Income (2020)</strong><br>$60,667</div>
+            </div>
+            <div class="stat">
+                <i class="fas fa-home"></i>
+                <div><strong>Median Home Value (2024)</strong><br>$229,400</div>
+            </div>
+        </div>
+        <!-- Main Information Section -->
+        <div class="main-info">
+            <div class="info-box">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <div>
+                    <h3>Key Characteristics</h3>
+                    <p><strong>Tax Base Per Capita:</strong> $161,226</p>
+                    <p><strong>Tax Rate:</strong> Median Actual Tax Rate: $1.41</p>
+                    <p><strong>Tax Household Impact:</strong> Tax Burden (% of Income): 5.3%</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-road"></i>
+                <div>
+                    <h3>Assets & Infrastructure</h3>
+                    <p><strong>Property Assessment:</strong> 79% Residential, 19% Non-Residential, 2% Heavy Industrial</p>
+                    <p><strong>Roads:</strong> Median of Regional Roads (km): 23<br>Median of Municipal Roads (km): 457</p>
+                    <p><strong>Water and Wastewater Disposal:</strong> Median Rate per Household per Year: $938</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-concierge-bell"></i>
+                <div>
+                    <h3>Services</h3>
+                    <p>Own police force</p>
+                    <p>Full-time fire department</p>
+                    <p>Access to international airport</p>
+                    <p>Regional hospital with specialty services</p>
+                    <p>Full network transit</p>
+                    <p><strong>Administration Types:</strong> Large staff complement, City council, Committee, Board, and Commission to manage services</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-money-check-alt"></i>
+                <div>
+                    <h3>Total Expenses</h3>
+                    <p><strong>Median Expense per Capita:</strong> $2,652</p>
+                    <p><strong>Median Total Expense:</strong> $187.8M</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section for Regional Impact -->
+    <div class="footer">
+        <div><i class="fas fa-school"></i> <strong>Education</strong><br>Elementary and secondary schools, University, Post-secondary</div>
+        <div><i class="fas fa-futbol"></i> <strong>Recreation</strong><br>Hosts large events year-round, Large recreation facilities</div>
+        <div><i class="fas fa-landmark"></i> <strong>Tourism and Culture</strong><br>Cultural facilities, Large convention centers, Popular tourist destination</div>
+        <div><i class="fas fa-briefcase"></i> <strong>Economic</strong><br>Popular destination for immigrants due to recognition and employment opportunities</div>
+    </div>
+</div>
+
+<!-- Placeholder for additional tabs -->
+<div id="Urban" class="content" style="display: none;">Urban content here</div>
+<div id="Municipal" class="content" style="display: none;">Municipal content here</div>
+<div id="Civic" class="content" style="display: none;">Civic content here</div>
+<div id="Residential" class="content" style="display: none;">Residential content here</div>
+<div id="Rural" class="content" style="display: none;">Rural content here</div>
+
+</body>
+</html>
